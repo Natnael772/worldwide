@@ -10,9 +10,9 @@ export default function Sidebar() {
       <Logo />
       <AppNav />
 
-      {/* nested routing  */}
+      {/* handle nested routing  */}
       <Outlet />
-      {/* <p>List of cities...</p> */}
+
       <footer className={styles.footer}>
         <p className={styles.copyright}>
           &copy;{new Date().getFullYear()} by WorldWise Inc.
