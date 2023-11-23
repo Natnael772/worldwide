@@ -2,13 +2,17 @@ import React from "react";
 import styles from "./Sidebar.module.css";
 import Logo from "./Logo";
 import AppNav from "./AppNav";
+import { Outlet } from "react-router-dom";
 
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-      <p>List of cities...</p>
+
+      {/* nested routing  */}
+      <Outlet />
+      {/* <p>List of cities...</p> */}
       <footer className={styles.footer}>
         <p className={styles.copyright}>
           &copy;{new Date().getFullYear()} by WorldWise Inc.
