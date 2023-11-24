@@ -1,6 +1,16 @@
 import React, { useEffect } from "react";
 import styles from "./CountryList.module.css";
 
-export default function CountryList({ cities }) {
-  return <ul className={styles.countryList}></ul>;
+import CountryItem from "./CountryItem";
+
+export default function CountryList({ cities, isLoading }) {
+  const countries = [];
+
+  return (
+    <ul className={styles.countryList}>
+      {countries.map((country) => (
+        <CountryItem country={country} key={country.id} />
+      ))}
+    </ul>
+  );
 }
